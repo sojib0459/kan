@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your $75 Domino's Gift Card</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #0046be;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header .logo img {
+            width: 150px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #ffcc00;
+            color: #0046be;
+        }
+
+        .hero .content h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero .content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        #dominos-gif {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        #claim-link {
+            text-decoration: none;
+        }
+
+        #claim-button {
+            background-color: #0046be;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            animation: updown 2s infinite ease-in-out;
+            transition: background-color 0.3s ease;
+        }
+
+        #claim-button:hover {
+            background-color: #002b80;
+        }
+
+        /* Animation for up and down movement */
+        @keyframes updown {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://example.com/dominos-logo.png" alt="Domino's Logo">
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="content">
+            <h1>Claim Your $75 Domino's Gift Card Now!</h1>
+            <p>Enjoy a delicious meal with a $75 Domino's gift card. Claim yours today and satisfy your cravings!</p>
+        </div>
+        <div class="image">
+            <img src="https://example.com/dominos-pizza.gif" alt="Domino's Pizza GIF" id="dominos-gif">
+        </div>
+        <a href="https://www.dominos.com" id="claim-link">
+            <button id="claim-button">Claim Your Gift Card</button>
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Domino's Pizza Gift Card Promotion. All rights reserved.</p>
+    </footer>
+</body>
+</html>
