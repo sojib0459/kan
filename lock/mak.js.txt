@@ -1,3 +1,0 @@
-document.getElementById('claim-button').addEventListener('click', function() {
-    window.location.href = 'https://www.cashapp.com';
-});
