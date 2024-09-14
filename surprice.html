@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Sample Box Giveaway</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #0056b3;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .logo img {
+            width: 150px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .hero .content h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #0056b3;
+        }
+
+        .hero .content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        #sample-box {
+            width: 250px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        #register-link {
+            text-decoration: none;
+        }
+
+        #register-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 50px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            animation: spring 1.5s infinite ease-in-out;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        #register-button:hover {
+            background-color: #218838;
+        }
+
+        /* Spring-like animation for the button */
+        @keyframes spring {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            25% {
+                transform: translateY(-15px);
+            }
+            50% {
+                transform: translateY(7px);
+            }
+            75% {
+                transform: translateY(-3px);
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://example.com/surprise-box-logo.png" alt="Surprise Sample Box Logo">
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="content">
+            <h1>Check Out Your Surprise Sample Box!</h1>
+            <p>Enter your information now for a chance to win exciting surprises delivered to your doorstep.</p>
+        </div>
+        <div class="image">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHIIYtCFdW00WsnabvXQzMc-DQ657bJAZ-YPRm_biJJy1K71RYVMdn1az7ThKk-fcQNMJ7WcSCfPItzaWJ85KbAcsr7nZbhOBJNLRKWEHOJ_no7NacNybjWJCauUEazFAcdqtE_j2p7oBmrs6dLox_1ZnL7SeiaookYnjyConURigL0akFswbQjneZT1o/w325-h325/surprise.gif" alt="Sample Box Image" id="sample-box">
+        </div>
+        <a href="https://example.com/register" id="register-link">
+            <button id="register-button">Register Now</button>
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Surprise Sample Box Promotion. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
