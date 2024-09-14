@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walmart Money Generator</title>
+    <title>Walmart - Special Offer</title>
     <style>
         /* General Reset */
         * {
@@ -14,116 +14,186 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiaPfYb-UF7Z4S6GcM-Zv50G9zGzyCN4jS1o_rX46O-3V_TapgBeex94WYO64yFejqr5AfvAwRLzv5vdrWW6xarJczz1QqB9yOq17yllo5gsvhhjEw6XWnd1Livgk-9DJnooEFCtA9Vnlnl-e2HpiwiQGdaXoorvkpIehyphenhyphenVmYO_NB46XDBnRm9vRj8dF3Y/w640-h549/walmart.jpg'); /* Replace with actual background image URL */
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            height: 100vh;
-            overflow-x: hidden;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
         }
 
+        /* Navigation bar */
         nav {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 15px;
-            display: flex;
-            justify-content: flex-end; /* Aligns the nav items to the right */
+            background-color: #0071ce;
+            padding: 10px 0;
             position: fixed;
-            width: 100%;
             top: 0;
-            z-index: 1000;
+            width: 100%;
+            z-index: 100;
         }
 
         nav ul {
-            list-style: none;
             display: flex;
-        }
-
-        nav ul li {
-            margin-right: 20px;
+            justify-content: space-around;
+            list-style: none;
         }
 
         nav ul li a {
             color: white;
-            text-decoration: none;
             font-size: 18px;
+            text-decoration: none;
         }
 
-        .container {
+        /* Hero Section */
+        .hero {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            padding: 100px 50px;
-            height: 100%;
+            background-image: url('https://assets2.cbsnewsstatic.com/hub/i/r/2024/01/10/84f6be87-49c4-4a04-9ae5-7ad9c20358d2/thumbnail/1200x630/356c76f25aa526317c0727da5fdac07b/gettyimages-1921103066.jpg?v=25685eaa472b1a5dbb5bd46ae506d232'); /* Replace with actual background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
         }
 
-        .left-content {
-            max-width: 50%;
-            animation: fadeIn 2s ease forwards;
-        }
-
-        .left-content h1 {
-            font-size: 48px;
+        .hero h1 {
+            font-size: 50px;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+            animation: floatUp 2s ease forwards;
         }
 
-        .left-content p {
-            font-size: 24px;
+        .hero p {
+            font-size: 22px;
             margin-bottom: 30px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+            animation: floatUp 2.5s ease forwards;
         }
 
-        #claim-button {
+        .hero button {
             background-color: #ffc107;
-            color: black;
             border: none;
             padding: 15px 30px;
             font-size: 20px;
             cursor: pointer;
+            color: black;
             border-radius: 5px;
-            text-transform: uppercase;
-            animation: slideIn 2s ease forwards;
+            animation: floatUp 3s ease forwards;
         }
 
-        #claim-button:hover {
+        .hero button:hover {
             background-color: #e0a800;
         }
 
-        .right-content {
-            animation: riseIn 2s ease forwards;
+        .hero img {
+            margin-top: 30px;
+            width: 300px; /* Adjust image size */
+            height: auto;
+            animation: floatUp 3.5s ease forwards;
         }
 
-        .right-content img {
+        /* Content Section */
+        .content {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: floatUp 4s ease forwards;
+        }
+
+        .content h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #0071ce;
+        }
+
+        .content p {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        /* Image Section */
+        .image-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .image-section img {
             width: 300px;
             height: auto;
+            margin: 20px;
+            animation: floatUp 4.5s ease forwards;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
+        /* Footer */
+        footer {
+            background-color: #0071ce;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Keyframe animations for float-up effect */
+        @keyframes floatUp {
             from {
                 opacity: 0;
+                transform: translateY(50px);
             }
             to {
                 opacity: 1;
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateX(-100%);
-            }
-            to {
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes riseIn {
-            from {
-                transform: translateY(100%);
-            }
-            to {
                 transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .hero button {
+                padding: 12px 25px;
+                font-size: 18px;
+            }
+
+            .hero img {
+                width: 250px;
+            }
+
+            .image-section img {
+                width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero img {
+                width: 200px;
+            }
+
+            .image-section img {
+                width: 200px;
             }
         }
     </style>
@@ -133,22 +203,50 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#transactions">Transaction</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="container">
-        <div class="left-content">
-            <h1>Walmart Money Generator</h1>
-            <p>Receive Bonus Money</p>
-            <button id="claim-button">Claim</button>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to Walmart</h1>
+        <p>Exclusive deals and offers available now!</p>
 
-        <div class="right-content">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2dWJTdcP1wBke5ujyr9Lu8u4pY_iIcoarm17DmhlyEkH6yEX7CyfW8UlRDMzzr7ig_iUqhdJjennN52T39k0XDOprjD1T1R6_6HaO3IZVjKJisOxwo7iJs9JF_-jAKX9gHQGmyuc6LWEXkHal4x5yKbRWX_8VL3YzvtNo_K_ZyWY5yykm8w_QvoqzKu4/s16000/walmar.jpg" alt="Walmart Mobile"> <!-- Replace with actual mobile image URL -->
+        <!-- Claim Your Bonus button with link -->
+        <a href="https://example.com/claim" target="_blank">
+            <button>Claim Your Bonus</button>
+        </a>
+
+        <!-- Image with link -->
+        <a href="https://example.com/walmart-offer" target="_blank">
+            <img src="https://walmartsale.weebly.com/uploads/1/2/9/4/129454297/published/walmart2019-100.png?1581777836" alt="Walmart Bonus Image"> <!-- Replace with actual image URL -->
+        </a>
+    </section>
+
+    <!-- Content Section -->
+    <div class="content" id="offers">
+        <h2>Why Shop at Walmart?</h2>
+        <p>At Walmart, we offer a wide variety of products at unbeatable prices. Our special offers will help you save big!</p>
+
+        <!-- Image Section with links -->
+        <div class="image-section">
+            <a href="https://example.com/product1" target="_blank">
+                <img src="https://i5.walmartimages.com/seo/JOYIN-28-Pack-Kids-Valentines-Day-Gift-Cards-Mini-Sports-Ball-Figure-Stress-Balls-Squeeze-Foam-Classroom-Exchange-Prizes-Anxiety-Relief-Valentine-Par_c0dbc10a-9494-4945-83d2-3a590751fa9d.2bb808c88b138f1165d0ba9cd2a6da4d.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF" alt="Product 1"> <!-- Replace with actual product image URLs -->
+            </a>
+            <a href="https://example.com/product2" target="_blank">
+                <img src="https://i5.walmartimages.com/seo/Hello-Baby-Gift-Basket-Blue_c75f7e3b-733d-4baa-a9bf-b91c1edad28b.794105d3a6aa36c0bc38abfbf75fbabd.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="Product 2">
+            </a>
+            <a href="https://example.com/product3" target="_blank">
+                <img src="https://i5.walmartimages.com/seo/Letter-Bottle-Personalized-Gift-Valentines-Day-Wedding-Anniversary-Romantic-Kit-Glass-Cork-Rose-Petal-Parchment-Paper-Boyfriend-Girlfriend-Wife-Husba_b94efc9a-a589-471f-9d5c-c647c0736891.c0eccfdc69b673db0d27561f9839050c.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" alt="Product 3">
+            </a>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Walmart. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
